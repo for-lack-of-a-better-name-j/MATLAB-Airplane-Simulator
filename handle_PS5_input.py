@@ -23,11 +23,11 @@ def stop_on_o_btn_pressed():
 def on_left_stick_y_changed(left_stick_y):
     print(f"left stick y:{left_stick_y}")
     with open("left_stick_y", "w") as f:
-        f.write(str(left_stick_y))
-        # if left_stick_y < 0:
-        #    f.write(str(abs(0.5 * left_stick_y)))
-        # else:
-        #    f.write(str(0.5 * left_stick_y + 0.5))
+        # f.write(str(left_stick_y))
+        if left_stick_y < 0:
+            f.write(str(abs(0.5 * left_stick_y)))
+        else:
+            f.write(str(0.5 * left_stick_y + 0.5))
 
 
 def on_left_stick_x_changed(left_stick_x):

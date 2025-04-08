@@ -102,13 +102,13 @@ rAxis = [1,0,0]; %axis of rotation
 RotationAxisNormed = rAxis/norm(rAxis); %axis of rotation normalized
 
 
-delta_t = .01;
+delta_t = 1;
 for ii = 1:1000
     % get control input
-    delta_r =  str2double(fileread("left_stick_x"))*.05;
+    delta_r =  str2double(fileread("left_stick_x"))*.5;
     delta_t =  str2double(fileread("left_stick_y"))*.05;
-    delta_e = str2double(fileread("right_stick_y"))*.05;
-    delta_a = str2double(fileread("right_stick_x"))*.05;
+    delta_e = str2double(fileread("right_stick_y"))*.5;
+    delta_a = str2double(fileread("right_stick_x"))*.5;
     if isnan(delta_r)
         delta_r = 0;
     end
