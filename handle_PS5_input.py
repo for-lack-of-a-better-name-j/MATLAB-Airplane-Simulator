@@ -24,24 +24,43 @@ def on_left_stick_y_changed(left_stick_y):
     print(f"left stick y:{left_stick_y}")
     with open("left_stick_y", "w") as f:
         f.write(str(left_stick_y))
+        # if left_stick_y < 0:
+        #    f.write(str(abs(0.5 * left_stick_y)))
+        # else:
+        #    f.write(str(0.5 * left_stick_y + 0.5))
 
 
 def on_left_stick_x_changed(left_stick_x):
     print(f"left stick x:{left_stick_x}")
     with open("left_stick_x", "w") as f:
         f.write(str(left_stick_x))
+        # if left_stick_x < 0:
+        #     f.write(str(abs(0.5 * left_stick_x)))
+        # else:
+        #     f.write(str(0.5 * left_stick_x + 0.5))
+        #
 
 
 def on_right_stick_y_changed(right_stick_y):
     print(f"right stick y:{right_stick_y}")
     with open("right_stick_y", "w") as f:
         f.write(str(right_stick_y))
+        # if right_stick_y < 0:
+        #     f.write(str(abs(0.5 * right_stick_y)))
+        # else:
+        #     f.write(str(0.5 * right_stick_y + 0.5))
+        #
 
 
 def on_right_stick_x_changed(right_stick_x):
     print(f"right stick x:{right_stick_x}")
     with open("right_stick_x", "w") as f:
         f.write(str(right_stick_x))
+        # if right_stick_x < 0:
+        #     f.write(str(abs(0.5 * right_stick_x)))
+        # else:
+        #     f.write(str(0.5 * right_stick_x + 0.5))
+        #
 
 
 def on_error(error):

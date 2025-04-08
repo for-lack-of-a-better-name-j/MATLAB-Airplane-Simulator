@@ -16,6 +16,7 @@ function [fxT, TxQ] = PropellerThrustAndTorque(delta_t,ur,consts)
   if delta_t == 0
     TxQ =0;
     fxT = 0;
+    return
   end
   n = consts.n_max*(1-(1-delta_t)^2);
   J = ur/(n*consts.D);
